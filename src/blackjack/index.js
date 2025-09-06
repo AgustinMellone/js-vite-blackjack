@@ -49,6 +49,10 @@ import { crearDeck, pedirCarta, valorCarta, turnoComputadora, crearCartaHTML } f
          btnDetener.disabled = true;
          turnoComputadora( puntosJugador, puntosHTML[1], divCartasComputadora, deck );
  
+     // ==  → Igualdad débil: compara valores con conversión de tipos (ej: '5' == 5 → true)
+    // === → Igualdad estricta: compara valores y tipos sin conversión (ej: '5' === 5 → false)
+    // Recomendación: usar === para evitar errores por coerción de tipos.    
+    
      } else if ( puntosJugador === 21 ) {
          console.warn('21, genial!');
          btnPedir.disabled   = true;
